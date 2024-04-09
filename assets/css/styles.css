@@ -1,85 +1,53 @@
 * {
     margin: 0;
     padding: 0;
-    text-decoration: none;
     box-sizing: border-box;
-}
-
+    text-decoration: none;
+} 
 
 body {
     color: blue;
-    background: url(../image/star-wars.jpeg);
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    text-align: justify;
-    text-transform: uppercase;
-    font-family: 'Pathway Gothic One', sans-serif;
-    letter-spacing: 6px;
-    line-height: 150%;
-    font-weight: 600;
-    height: 100vh; 
+    background: url(/assets/image/star-wars.jpeg);
     overflow: hidden;
+    perspective: 200px;
+    border: 5px red solid;
 }
 
-.loop {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 800px;
-    height: 400px; 
-    margin: -200px 0 0 -400px; 
-    transform: perspective(300px) rotateX(25deg);
+p{
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    width: 600px;
+    margin: 0 auto;
+    transform: rotateX(30deg);
+    animation: scroll 20s ease-in;
 }
+
+
+
 
 .logo {
-    opacity: 0;
-    animation-delay: 1s;
-    animation-duration: 2s; 
-    animation-name: logo;
-    animation-timing-function: ease-out;
+    display: flex;
+    justify-content: center;
+    margin-top: 50vh;
+    animation: nonedisplay 2s ease-in-out forwards;
 }
 
-img , .logo {
-    width: 95%;
-}
 
-p {
-    position: absolute;
-    top: 100%;
-    opacity: 0;
-    animation-name: scroll;
-    animation-delay: 3s;
-    animation-duration: 20s;
-    animation-timing-function: linear;
-    text-align: center;
+
+@keyframes nonedisplay {
+
+    0% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+    
 }
 
 @keyframes scroll {
-    0% {
-        opacity: 1;
-        top: 100%;
-    }
-    80% {
-       opacity: 1;
-    }
-    100% {
-        top: 0;
-        opacity: 1;
-    }
-}
 
-@keyframes logo {
-    0% {
-        opacity: 0;
-    }
-    20% {
-        opacity: 1;
-    }
-    80% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+    0% {transform: rotateX(30deg)
+    translateY(400px)}
+
+    100% {transform: rotateX(30deg)
+    translateY(-300px)}
+    
 }
