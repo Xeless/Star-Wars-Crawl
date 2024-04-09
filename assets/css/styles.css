@@ -10,7 +10,6 @@ body {
     background: url(/assets/image/star-wars.jpeg);
     overflow: hidden;
     perspective: 200px;
-    border: 5px red solid;
 }
 
 p{
