@@ -1,50 +1,85 @@
-*{
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
 }
 
-body{
-  color: blue;
-  background: url(../image/star-wars.jpeg);
-  display: flex;
-  justify-content: center;
-  text-align: justify;
-  text-transform: uppercase;
-  font-family: 'Pathway Gothic One', sans-serif;
- letter-spacing: 6px;
- line-height: 150%;
- font-weight: 600;
- margin: 20%;
- font-size: 200%;
- height: 800px;
- perspective: 400px;
- transform-origin: 50% 100%;
- overflow: hidden;
+
+body {
+    color: blue;
+    background: url(../image/star-wars.jpeg);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: justify;
+    text-transform: uppercase;
+    font-family: 'Pathway Gothic One', sans-serif;
+    letter-spacing: 6px;
+    line-height: 150%;
+    font-weight: 600;
+    height: 100vh; 
+    overflow: hidden;
 }
 
-
-.container-star-wars {
-  
+.loop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    height: 400px; 
+    margin: -200px 0 0 -400px; 
+    transform: perspective(300px) rotateX(25deg);
 }
 
-.title {
+.logo {
+    opacity: 0;
+    animation-delay: 1s;
+    animation-duration: 2s; 
+    animation-name: logo;
+    animation-timing-function: ease-out;
+}
+
+img , .logo {
+    width: 95%;
+}
+
+p {
+    position: absolute;
+    top: 100%;
+    opacity: 0;
+    animation-name: scroll;
+    animation-delay: 3s;
+    animation-duration: 20s;
+    animation-timing-function: linear;
     text-align: center;
 }
 
-@keyframes crawl {
-
+@keyframes scroll {
     0% {
-        top: 0;
-
-        transform: rotateX(20deg) translateZ(0);
+        opacity: 1;
+        top: 100%;
     }
-    
-
+    80% {
+       opacity: 1;
+    }
     100% {
-        top: -6000px;
+        top: 0;
+        opacity: 1;
+    }
+}
 
-    transform: rotateX(25deg) translateZ(-2500px);
+@keyframes logo {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
