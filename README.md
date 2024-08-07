@@ -22,12 +22,11 @@ Ceci est un projet réalisé en solo dans le cadre de notre apprentissage chez B
 
 ### Built with
 
-- SCSS
-- JS
+- CSS
 - Flexbox
 - Mobile-first workflow
 
-[![My Skills](https://skillicons.dev/icons?i=html,sass,js)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css)](https://skillicons.dev)
 
 ## Author
 
