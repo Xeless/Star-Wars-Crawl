@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/7d3c6652-4d67-471e-8218-29fdc84e1c88)<h1 align="center">Welcome to Star-Wars-Crawl👋</h1>
+<h1 align="center">Welcome to Star-Wars-Crawl👋</h1>
 <p>
 </p>
 
